@@ -4,9 +4,124 @@
     box-sizing: border-box;
 }
 
+#btnTop {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1000;
 
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    background-color: #FFB800;
+    color: white;
+    cursor: pointer;
+
+    transition: opacity 0.3s ease;
+}
+
+#btnTop i {
+    font-size: 38px; /* ajusta só o ícone */
+    line-height: 1;
+}
+
+#secao-carrossel {
+    margin-bottom: 70px;
+}
+#secao-carrossel h1 {
+    font-family: 'Winner Sans Bold';
+    font-size: 44px;
+    margin-top: 20px;
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.carrossel {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.carrossel-item img {
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 500px;
+}
+
+/* estilização das setas de navegação */
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    border-radius: 50%;
+    padding: 0;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+.slick-prev {
+    left: 40px;
+    background-color: #000;
+}
+.slick-prev:before {
+    content: '\f060';
+    font-family: 'Font Awesome 6 free';
+    font-weight: 900;
+    text-indent: 0;
+    position: absolute;
+    font-size: 35px;
+    color: white;
+    background-color: #000;
+/* centralização horizontal e vertical */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;     
+}
+.slick-next{
+    right: 40px;
+}
+.slick-next:before {
+    content: '\f061';
+    font-family: 'Font Awesome 6 free';
+    font-weight: 900;
+    text-indent: 0;
+    position: absolute;
+    font-size: 35px;
+    color: white;
+    background-color: #000; 
+/* centralização horizontal e vertical */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;     
+}
+.slick-prev:hover, .slick-next:hover {
+    background-color: #000;
+}
+.slick-prev, .slick-next {
+    z-index: 2 !important;
+    background-color: #000;
+}
+.slick-prev:focus,.slick-next:focus,.slick-prev:active,.slick-next:active {
+    outline: none;
+    background-color: #000;
+    border-radius: 50%;
+}
+.slick-prev:focus-visible,.slick-next:focus-visible {
+    box-shadow: 0 0 0 2px white;
+}
 
 
 #secao-sobre {
