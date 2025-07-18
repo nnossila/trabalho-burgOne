@@ -1,13 +1,11 @@
 /* Winner Sans Bold */
 @font-face {
   font-family: 'Winner Sans Bold';
-  src: url('./WinnerSans-Bold.otf') format('otf');
-  font-weight: bold;
+  src: url('./WinnerSans-Bold.otf') format('opentype');
 }
 
 /* Winner Sans Extra Bold */
 @font-face {
   font-family: 'Winner Sans Extra Bold';
-  src: url('winner-extra-bold.ttf') format('ttf');
-  font-weight: bolder;
+  src: url('winner-extra-bold.ttf') format('truetype');
 }
