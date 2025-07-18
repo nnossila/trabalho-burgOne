@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 header {
     width: 100%;
     height: 60px;
@@ -43,9 +47,8 @@ nav ul {
     width: 90%;   /* precisa ter largura para funcionar */
 }
 nav ul li {
-    margin-right: 20px;
-    font-family: Winner Sans;
-    font-size: 23px;
+    font-family: 'Winner Sans Bold';
+    font-size: 17px;
     cursor: pointer;
 }
 nav ul li a {
@@ -61,10 +64,9 @@ nav ul li a {
 header .facaSeuPedido a {
     text-decoration: none;
     color: #FAE311;
-    font-family: 'Winner Sans Bold';
+    font-family: 'Winner Sans Extra Bold';
     font-size: 30px;
     margin: 0;
     padding: 0;
     line-height: 1;
-    display: inline-block;
 }
