@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 200px;
+    text-align: center;
+    font-family: 'Winner Sans Bold';
+}
+
+.formulario {
+    width: 600px;
+    margin: 15px auto;
+}
+.formulario label {
+    font-family: Arial, sans-serif;
+}
+
+input[type= text], input[type= tel] {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 5px 0 2px 0;
+    display: inline-block;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 5px 0 2px 0;
+    display: inline-block;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    box-sizing: border-box;   
+    resize: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #C0171A;
+    color: #FAE311;
+    padding: 7px 20px 9px 20px;
+    margin: 0 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    font-family: 'Winner Sans Bold';
+}
+
+input[type=submit]:hover {
+    background-color: #A41113;
+    color: #DAA520;
+}
+
+.error {
+    color: red;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+    display: block;
+}
+
+
+/* Mensagem de confirmação */
+.pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90%;
+}
+.mensagemConfirmacao {
+    display: none;
+    width: 500px;
+    height: 270px;
+    text-align: center;
+    align-items: center;
+    background-color: #383838;
+    border-radius: 15px;
+    color: white;
+}
+.mensagemConfirmacao h3 {
+    font-size:  35px;
+    margin: 20px 0;
+}
+.mensagemConfirmacao p {
+    width: 400px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.mensagemConfirmacao .paragrafo2 {
+    margin-top: 7px;
+}
+#botaoPaginaInicial {
+    display: inline-block;
+    margin: 19px auto;
+    padding: 7px 13px 11px 13px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #C0171A;
+    color: #FAE311;
+    border-radius: 10px;
+    transition: background-color 0.25s;
+    font-family: 'Winner Sans Bold';
+    line-height: 1;
+    transition: 0.3s ease-in-out;
+}
+#botaoPaginaInicial:hover {
+    background-color: #A41113;
+    color: #DAA520;
+}

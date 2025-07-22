@@ -1,7 +1,7 @@
 /* Winner Sans Bold */
 @font-face {
   font-family: 'Winner Sans Bold';
-  src: url('./WinnerSans-Bold.otf') format('opentype');
+  src: url('WinnerSans-Bold.otf') format('opentype');
 }
 
 /* Winner Sans Extra Bold */
