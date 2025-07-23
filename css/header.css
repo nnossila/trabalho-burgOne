@@ -50,6 +50,7 @@ nav ul li {
     font-family: 'Winner Sans Bold';
     font-size: 17px;
     cursor: pointer;
+    transform: translateY(-1px);
 }
 nav ul li a {
     text-decoration: none;
@@ -73,6 +74,7 @@ header .facaSeuPedido a {
     margin: 0;
     padding: 0;
     line-height: 1;
+    transform: translateY(-2px);
     transition: 0.2s ease-in-out;
 }
 header .facaSeuPedido a:hover {

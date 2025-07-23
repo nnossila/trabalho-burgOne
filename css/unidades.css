@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.titulo-centro {
+    text-align: center;
+    font-size: 38px;
+    font-family: 'Winner Sans Bold';
+    margin-top: 40px;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+.card {
+    width: 450px;
+    height: 510px;
+    background-color: #383838;
+    padding-top: 14px;
+    border-radius: 20px;
+/*     margin-left: 50px; */
+}
+.card img {
+    width: 420px;
+    height: 330px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+}
+.card h2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    font-size: 36px;
+    margin-top: 10px;
+}
+.card .endereco {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 18px;
+}
+.card hr {
+    width: 80%;
+    height: 2px;
+    color: #FFF;
+    margin: 0 auto;
+}
+
+.card .entregas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.card.funciona .entregas i,
+.card.funciona .entregas p {
+    color: #67FF59;
+}
+.card .entregas i {
+    font-size: 30px;
+    transform: translateY(0px);
+}
+.card .entregas p {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    line-height: 0.9;
+    font-size: 17px;
+}
+
+.bi-x {
+    display: inline-block;
+    width: 0.9em;
+    overflow: hidden;
+}
+.card.nao-funciona .entregas i,
+.card.nao-funciona .entregas p {
+    color: #d64d4d;
+}
