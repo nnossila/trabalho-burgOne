@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/facaSeuPedido.css">    
+    <title>BurgOne - Faça seu Pedido</title>
+    <link rel="icon" type="image/png" href="img/logo so o hamburger.png">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <a href="index.html">
+                <img class="logo" src="img/logo-vertical-semFundo-textoBranco2.png" alt="">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="hamburgueres.html">HAMBURGUERES</a></li>
+                <li><a href="acompanhamentos.html">ACOMPANHAMENTOS</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="unidades.html">UNIDADES</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+        <div class="facaSeuPedido">
+            <a href="facaSeuPedido.html">FAÇA SEU PEDIDO</a>
+        </div>
+    </header>
+
+    <div class="container-pedido">
+        <h1>FAÇA SEU PEDIDO</h1>
+        
+        <div class="abas">
+            <button class="botao-aba ativo" onclick="abrirMenu('hamburgueres')">Hambúrgueres</button>
+            <button class="botao-aba" onclick="abrirMenu('acompanhamentos')">Acompanhamentos</button>
+            <button class="botao-aba" onclick="abrirMenu('bebidas')">Bebidas</button>
+        </div>
+        
+        <div id="hamburgueres" class="secao-menu">
+            <div class="item-menu">
+                <img src="img/hamburguer 2.jpg" class="imagem-item" alt="">
+                <h3>Clássico</h3>
+                <p>Pão, hambúrguer, queijo, alface e tomate</p>
+                <span class="preco">R$ 18,00</span>
+                <button class="adicionar-carrinho" data-nome="Clássico" data-preco="18.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Chese-burger.jpg" class="imagem-item" alt="">
+                <h3>Cheeseburguer</h3>
+                <p>Pão, 1 hambúrguer, 2 fatias de queijo</p>
+                <span class="preco">R$ 22,00</span>
+                <button class="adicionar-carrinho" data-nome="Cheeseburguer" data-preco="22.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/haburguer-bacon 2.jpg" class="imagem-item" alt="" style="object-position: right;">
+                <h3>Bacon</h3>
+                <p>Pão, hambúrguer, queijo, bacon crocante</p>
+                <span class="preco">R$ 32,50</span>
+                <button class="adicionar-carrinho" data-nome="Bacon" data-preco="24.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/hamburguer-vegetariano.jpg" class="imagem-item" alt="">
+                <h3>Vegetariano</h3>
+                <p>Pão integral vegano, Batata-doce, queijo vegano, alface, cebola roxa, tomate cereja, molho de semente de papaya, cenoura ralada, rúcula</p>
+                <span class="preco">R$ 21,00</span>
+                <button class="adicionar-carrinho" data-nome="Vegetariano" data-preco="21.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/hamburger-frango 2.jpg" class="imagem-item" alt="" style="object-position: left;">
+                <h3>Frango</h3>
+                <p>Pão, hambúrguer de frango, queijo, alface e tomate</p>
+                <span class="preco">R$ 20,00</span>
+                <button class="adicionar-carrinho" data-nome="Frango" data-preco="20.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/X-Peixe.jpg" class="imagem-item" alt="">
+                <h3>X-Peixe</h3>
+                <p>Pão, 1 Hambúrguer de peixe, 1 fatia de queijo e molho tártaro</p>
+                <span class="preco">R$ 29,90</span>
+                <button class="adicionar-carrinho" data-nome="Duplo Cheddar" data-preco="26.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Hamburguer-japeleno.jpg" class="imagem-item" alt="">
+                <h3>Picante</h3>
+                <p>Pão, hambúrguer, queijo gouda, cebola no shoyu, molho barbecue, pimenta jalapeño</p>
+                <span class="preco">R$ 23,00</span>
+                <button class="adicionar-carrinho" data-nome="Picante" data-preco="23.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/hamburguer-barbecue.webp" class="imagem-item" alt="">
+                <h3>Barbecue</h3>
+                <p>Pão, hambúrguer, queijo, cebola caramelizada, molho barbecue</p>
+                <span class="preco">R$ 24,00</span>
+                <button class="adicionar-carrinho" data-nome="Barbecue" data-preco="24.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/egg-burger.webp" class="imagem-item" alt="">
+                <h3>Egg Burguer</h3>
+                <p>Pão, hambúrguer, queijo, ovo, alface, tomate e cebola roxa</p>
+                <span class="preco">R$ 22,00</span>
+                <button class="adicionar-carrinho" data-nome="Egg Burguer" data-preco="22.00">Adicionar</button>
+            </div>
+        </div>
+        
+        <div id="acompanhamentos" class="secao-menu" style="display:none">
+            <!-- Batata Frita -->
+            <div class="item-menu">
+                <img src="img/batata-frita.jpg" class="imagem-item" alt="">
+                <h3>Batata Frita</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 120g - R$ 8,00" data-preco="8.00">Pequena 120g - R$ 8,00</option>
+                    <option value="Média 190g - R$ 15,00" data-preco="15.00">Média 190g - R$ 15,00</option>
+                    <option value="Grande 250g - R$ 20,00" data-preco="20.00">Grande 250g - R$ 20,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Batata Frita">Adicionar</button>
+            </div>
+
+            <!-- Batata Rústica -->
+            <div class="item-menu">
+                <img src="img/batata-rustica.jpeg" class="imagem-item" alt="">
+                <h3>Batata Rústica</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 130g - R$ 14,00" data-preco="14.00">Pequena 130g - R$ 14,00</option>
+                    <option value="Média 190g - R$ 18,00" data-preco="18.00">Média 190g - R$ 18,00</option>
+                    <option value="Grande 230g - R$ 22,00" data-preco="22.00">Grande 230g - R$ 22,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Batata Rústica">Adicionar</button>
+            </div>
+
+            <!-- Anéis de Cebola -->
+            <div class="item-menu">
+                <img src="img/Aneis-de-cebola.jpg" class="imagem-item" alt="">
+                <h3>Anéis de Cebola</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 08 uni - R$ 13,00" data-preco="13.00">Pequena 08 uni - R$ 13,00</option>
+                    <option value="Média 12 uni - R$ 15,00" data-preco="15.00">Média 12 uni - R$ 15,00</option>
+                    <option value="Grande 18 uni - R$ 21,00" data-preco="21.00">Grande 18 uni - R$ 21,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Anéis de Cebola">Adicionar</button>
+            </div>
+
+            <!-- Chicken de Frango -->
+            <div class="item-menu">
+                <img src="img/chicken-de-frango.png" class="imagem-item" alt="">
+                <h3>Chicken de Frango</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 100g - R$ 16,00" data-preco="16.00">Pequena 100g - R$ 16,00</option>
+                    <option value="Média 150g - R$ 20,00" data-preco="20.00">Média 150g - R$ 20,00</option>
+                    <option value="Grande 220g - R$ 26,00" data-preco="26.00">Grande 220g - R$ 26,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Chicken de Frango">Adicionar</button>
+            </div>
+
+            <!-- Batata com Bacon e Cheddar -->
+            <div class="item-menu">
+                <img src="img/Batata-Bacon-Cheddar.jpg" class="imagem-item" alt="">
+                <h3>Batata c/ Bacon e Cheddar</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 170g - R$ 18,00" data-preco="18.00">Pequena 170g - R$ 18,00</option>
+                    <option value="Média 240g - R$ 22,00" data-preco="22.00">Média 240g - R$ 22,00</option>
+                    <option value="Grande 310g - R$ 28,00" data-preco="28.00">Grande 310g - R$ 28,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Batata c/ Bacon e Cheddar">Adicionar</button>
+            </div>
+
+            <!-- Pão de Alho -->
+            <div class="item-menu">
+                <img src="img/Pao-de-Alho.jpg" class="imagem-item" alt="">
+                <h3>Pão de Alho</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 02 uni - R$ 12,00" data-preco="12.00">Pequena 02 uni - R$ 12,00</option>
+                    <option value="Média 04 uni - R$ 16,00" data-preco="16.00">Média 04 uni - R$ 16,00</option>
+                    <option value="Grande 05 uni - R$ 24,00" data-preco="24.00">Grande 05 uni - R$ 24,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Pão de Alho">Adicionar</button>
+            </div>
+
+            <!-- Mini Salada Coleslaw -->
+            <div class="item-menu">
+                <img src="img/Mini-Salada-Coleslaw.png" class="imagem-item" alt="">
+                <h3>Mini Salada Coleslaw</h3>
+                <select class="selecionar-tamanho">
+                    <option value="Pequena 080g - R$ 06,00" data-preco="6.00">Pequena 080g - R$ 06,00</option>
+                    <option value="Média 120g - R$ 12,00" data-preco="12.00">Média 120g - R$ 12,00</option>
+                    <option value="Grande 180g - R$ 16,00" data-preco="16.00">Grande 180g - R$ 16,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Mini Salada Coleslaw">Adicionar</button>
+            </div>
+
+            <!-- Molhos -->
+            <div class="item-menu">
+                <img src="img/molho.png" class="imagem-item" alt="">
+                <h3>Molhos Simples</h3>
+                <select class="selecionar-tamanho">
+                    <option value="30ml - Ketchup - R$ 2,00" data-preco="2.00">30ml - Ketchup - R$ 2,00</option>
+                    <option value="30ml - Mostarda - R$ 2,00" data-preco="2.00">30ml - Mostarda - R$ 2,00</option>
+                    <option value="30ml - Maionese - R$ 2,00" data-preco="2.00">30ml - Maionese - R$ 2,00</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Molhos">Adicionar</button>
+            </div>
+            <div class="item-menu">
+                <img src="img/Molho-Artesanal.webp" class="imagem-item" alt="">
+                <h3>Molhos Artesanais</h3>
+                <select class="selecionar-tamanho">
+                    <option value="30ml - Barbecue - R$ 5,50" data-preco="5.50">30ml - Barbecue - R$ 5,50</option>
+                    <option value="30ml - Cheddar - R$ 5,50" data-preco="5.50">30ml - Cheddar - R$ 5,50</option>
+                </select>
+                <button class="adicionar-carrinho" data-nome="Molhos">Adicionar</button>
+            </div>
+        </div>
+        
+        <div id="bebidas" class="secao-menu" style="display:none">
+            <div class="item-menu">
+                <img src="img/Refrigerantes-Lata.png" class="imagem-item" alt="">
+                <h3>Refrigerante (Lata 350ml)</h3>
+                <p>
+                    <select class="selecionar-sabor">
+                        <option value="Coca-Cola">Coca-Cola</option>
+                        <option value="Coca Zero">Coca Zero</option>
+                        <option value="Guaraná">Guaraná</option>
+                        <option value="Fanta">Fanta Uva</option>
+                        <option value="Fanta">Fanta Laranja</option>
+                        <option value="Sprite">Sprite</option>
+                    </select>
+                </p>
+                <span class="preco">R$ 6,00</span>
+                <button class="adicionar-carrinho" data-nome="Refrigerante (Lata 350ml)" data-preco="6.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Refrigerantes-Garrafa500ml.jpg" class="imagem-item" alt="">
+                <h3>Refrigerante (Garrafa 500ml)</h3>
+                <p>
+                    <select class="selecionar-sabor">
+                        <option value="Coca-Cola">Coca-Cola</option>
+                        <option value="Coca Zero">Coca Zero</option>
+                        <option value="Guaraná">Guaraná</option>
+                        <option value="Fanta">Fanta Laranja</option>
+                        <option value="Fanta">Fanta Uva</option>
+                        <option value="Sprite">Sprite</option>
+                    </select>
+                </p>
+                <span class="preco">R$ 8,00</span>
+                <button class="adicionar-carrinho" data-nome="Refrigerante (Garrafa 500ml)" data-preco="8.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Refrigerantes-Garrafa1L.jpg" class="imagem-item" alt="" style="object-position: top;">
+                <h3>Refrigerante (Garrafa 1L)</h3>
+                <p>
+                    <select class="selecionar-sabor">
+                        <option value="Coca-Cola">Coca-Cola</option>
+                        <option value="Coca Zero">Coca Zero</option>
+                        <option value="Guaraná">Guaraná</option>
+                        <option value="Fanta">Fanta Laranja</option>
+                        <option value="Sprite">Sprite</option>
+                    </select>
+                </p>
+                <span class="preco">R$ 12,00</span>
+                <button class="adicionar-carrinho" data-nome="Refrigerante (Garrafa 1L)" data-preco="12.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Garrafa-Agua.webp" class="imagem-item" alt="" style="width: auto;">
+                <h3>Água sem gás (500ml)</h3>
+                <p></p>
+                <span class="preco">R$ 4,00</span>
+                <button class="adicionar-carrinho" data-nome="Água sem gás (500ml)" data-preco="4.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Garrafa-Agua-comGas.webp" class="imagem-item agua-gas" alt="">
+                <h3>Água com gás (500ml)</h3>
+                <p></p>
+                <span class="preco">R$ 5,00</span>
+                <button class="adicionar-carrinho" data-nome="Água com gás (500ml)" data-preco="5.00">Adicionar</button>
+            </div>
+            
+            <div class="item-menu">
+                <img src="img/Suco-Frutas.png" class="imagem-item" alt="">
+                <h3>Suco Natural (300ml)</h3>
+                <p>
+                    <select class="selecionar-sabor">
+                        <option value="Laranja">Laranja</option>
+                        <option value="Morango">Morango</option>
+                        <option value="Maracujá">Maracujá</option>
+                        <option value="Limão">Limão</option>
+                        <option value="Mamão">Mamão</option>
+                        <option value="Melancia">Melancia</option>
+                    </select>
+                </p>
+                <span class="preco">R$ 7,00</span>
+                <button class="adicionar-carrinho" data-nome="Suco Natural (300ml)" data-preco="7.00">Adicionar</button>
+            </div>
+        </div>
+        
+        <div class="resumo-pedido">
+            <h3>Seu Pedido</h3>
+            <p id="contador-itens">0 itens adicionados</p>
+            <p id="valor-total">Total: R$ 0,00</p>
+            <button id="limpar-carrinho" class="botao-limpar">
+                <i class="fas fa-trash-alt"></i> Limpar Carrinho
+            </button>
+        </div>
+    </div>
+
+<!--     <footer>
+        <div class="esquerda-footer">
+            <div class="imagem-footer">
+                <img src="img/logo redonda sem fundo 2.png" alt="">
+            </div>
+            <div class="redesSociais">
+                <div id="wpp">
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+                <div id="insta">
+                    <i class="bi bi-instagram"></i>
+                </div>
+                <div id="face">
+                    <i class="bi bi-facebook"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="texto-footer">
+            <p>venha comer na nossa hamburgeria, tenho certeza que você vai gostar</p>
+        </div>
+        <div class="mapa-footer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.948677868705!2d-49.29887891430845!3d-25.474031549415585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce30a18d40451%3A0xcddf548106995ae4!2sComodoro%20Burguer%20-%20Port%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1752862420391!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="copy">
+            Todos os direitos reservados à BurgOne - site desenvolvido para treinamento
+        </div>
+    </footer> -->
+
+    <script>
+        let itensCarrinho = [];
+        let valorTotal = 0;
+        
+        function abrirMenu(nomeMenu) {
+            // Esconde todos os menus
+            var menus = document.getElementsByClassName("secao-menu");
+            for (var i = 0; i < menus.length; i++) {
+                menus[i].style.display = "none";
+            }
+            
+            // Remove a classe 'ativo' de todos os botões
+            var botoes = document.getElementsByClassName("botao-aba");
+            for (var i = 0; i < botoes.length; i++) {
+                botoes[i].classList.remove("ativo");
+            }
+            
+            // Mostra o menu selecionado e marca o botão como ativo
+            document.getElementById(nomeMenu).style.display = "flex";
+            event.currentTarget.classList.add("ativo");
+        }
+        
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Adicionar itens ao carrinho
+            document.querySelectorAll('.adicionar-carrinho').forEach(botao => {
+                botao.addEventListener('click', function() {
+                    const nomeBase = this.dataset.nome;
+                    const elementoPai = this.parentElement;
+                    
+                    // Verifica se tem seleção de tamanho
+                    const selecaoTamanho = elementoPai.querySelector('.selecionar-tamanho');
+                    const selecaoSabor = elementoPai.querySelector('.selecionar-sabor');
+                    
+                    let nomeItem = nomeBase;
+                    let precoItem = 0;
+                    
+                    if (selecaoTamanho) {
+                        const opcaoSelecionada = selecaoTamanho.options[selecaoTamanho.selectedIndex];
+                        nomeItem += ` - ${opcaoSelecionada.text.split('-')[0].trim()}`;
+                        precoItem = parseFloat(opcaoSelecionada.dataset.preco);
+                    } else {
+                        precoItem = parseFloat(this.dataset.preco || '0');
+                    }
+                    
+                    if (selecaoSabor) {
+                        const saborSelecionado = selecaoSabor.options[selecaoSabor.selectedIndex].value;
+                        nomeItem += ` - ${saborSelecionado}`;
+                    }
+                    
+                    itensCarrinho.push({
+                        nome: nomeItem,
+                        preco: precoItem
+                    });
+                    
+                    valorTotal += precoItem;
+                    atualizarResumoPedido();
+                });
+            });
+            // Limpar carrinho
+            const botaoLimpar = document.getElementById('limpar-carrinho');
+            botaoLimpar?.addEventListener('click', limparCarrinho); // Operador ?. é seguro
+        });
+        
+        function atualizarResumoPedido() {
+            document.getElementById('contador-itens').textContent = 
+                `${itensCarrinho.length} ${itensCarrinho.length === 1 ? 'item' : 'itens'} adicionados`;
+                
+            document.getElementById('valor-total').textContent = 
+                `Total: R$ ${valorTotal.toFixed(2).replace('.', ',')}`;
+        }
+
+        function limparCarrinho() {
+            itensCarrinho = [];
+            valorTotal = 0;
+            atualizarResumoPedido();
+        }
+    </script>
+</body>
+</html>

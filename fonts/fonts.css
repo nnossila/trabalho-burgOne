@@ -9,3 +9,9 @@
   font-family: 'Winner Sans Extra Bold';
   src: url('winner-extra-bold.ttf') format('truetype');
 }
+
+/* Winner Sans Regular */
+@font-face {
+  font-family: 'Winner Sans Cond';
+  src: url('WinnerSans-Cond.ttf') format('truetype');
+}
