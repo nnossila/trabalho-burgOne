@@ -1,5 +1,3 @@
-/* Estilos responsivos para BurgOne - Mobile First */
-
 /* Base para mobile */
 @media screen and (max-width: 767px) {
     /* Carrossel responsivo */
@@ -145,12 +143,6 @@
     #secao-infantil h1 {
         font-size: 36px;
         bottom: 0;
-    }
-
-    /* Footer */
-    .mapa-footer iframe {
-        width: 100%;
-        height: 350px;
     }
 }
 
