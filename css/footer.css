@@ -56,7 +56,8 @@ footer {
     width: 45%;
     color: white;
     font-family: 'Winner Sans Bold', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
+    margin-left:  10px;
     text-align: left;
     display: flex;
     justify-content: center;
@@ -82,4 +83,85 @@ footer {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Responsivo */
+@media screen and (max-width: 767px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        height: 500px;
+    }
+
+    .esquerda-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .imagem-footer img {
+        width: 150px;
+        height: 150px;
+        margin-top: 0;
+    }
+
+    .redesSociais {
+        margin: 0 !important;
+    }
+
+    .texto-footer p {
+        padding: 0 20px;
+        margin: 20px 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .mapa-footer iframe {
+        display: none;
+    }
+
+    .copy {
+        bottom: 5px;
+        padding-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1420px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        height: 500px;
+    }
+
+    .esquerda-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .imagem-footer img {
+        width: 150px;
+        height: 150px;
+        margin-top: 0;
+    }
+
+    .redesSociais {
+        margin: 0 !important;
+    }
+
+    .texto-footer p {
+        padding: 0 20px;
+        margin: 20px 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .mapa-footer iframe {
+        display: none;
+    }
+
+    .copy {
+        bottom: 5px;
+        padding-bottom: 0 !important;
+    }
 }
