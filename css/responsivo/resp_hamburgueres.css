@@ -1,0 +1,91 @@
+/* Estilos responsivos para página de Hamburgueres - Mobile First */
+
+/* Base para mobile (até 767px) */
+@media screen and (max-width: 1023px) {
+    .container h1 {
+        font-size: 28px !important;
+        margin: 20px 0 30px 0 !important;
+        padding: 0 15px;
+    }
+
+    .pai {
+        width: 100% !important;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .pai section {
+        width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    /* Remove as bordas laterais em mobile */
+    #esquerda, #direita {
+        border: none !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 100%;
+        height: auto !important;
+        flex-direction: column;
+        margin: 15px 0 !important;
+        padding: 15px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+    }
+
+    .card .imagem img {
+        width: 100% !important;
+        height: 150px !important;
+    }
+
+    .card .descricao {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+
+    .card .descricao h2 {
+        font-size: 20px !important;
+    }
+
+    .card .descricao p {
+        font-size: 14px;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1240px) {
+    .descricao.vegetariano h2 {
+        margin-top: 0;
+    }
+    .descricao.vegetariano p {
+        margin-top: 4px;
+        width: 230px;
+    }
+}
+
+/* Desktop pequeno (1024px - 1199px) */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .pai {
+        width: 1000px !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 500px;
+    }
+}
+
+/* Desktop grande (1200px - 1440px) - Ajustes mínimos */
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .pai {
+        width: 90% !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 500px;
+    }
+}
