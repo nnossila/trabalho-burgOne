@@ -218,9 +218,6 @@ body {
     transform: translateY(-2px);
 }
 
-
-/* esta com problema no padding, ele esta saltando fora da animação */
-
 .detalhes-pedido {
     background-color: #454545;
     height: 0;
