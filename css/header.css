@@ -82,6 +82,7 @@ header .facaSeuPedido a:hover {
 }
 
 
+/* Responsivo */
 @media (max-width: 620px) {
     header {
         flex-direction: column;

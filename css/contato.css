@@ -100,10 +100,12 @@ input[type=submit]:hover {
     color: white;
 }
 .mensagemConfirmacao h3 {
+    font-family: 'Winner Sans Bold';
     font-size:  35px;
     margin: 20px 0;
 }
 .mensagemConfirmacao p {
+    font-family: Arial, Helvetica, sans-serif;
     width: 400px;
     margin: 0 auto;
     font-size: 18px;

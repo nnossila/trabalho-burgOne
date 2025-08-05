@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/facaSeuPedido.css">    
+    <link rel="stylesheet" href="css/facaSeuPedido.css"> 
+    <link rel="stylesheet" href="css/responsivo/resp_facaSeuPedido.css"> 
     <title>BurgOne - Faça seu Pedido</title>
     <link rel="icon" type="image/png" href="img/logo-so-hamburger.png">
 </head>
@@ -262,7 +263,7 @@
         </div>
         
         <div id="bebidas" class="secao-menu" style="display:none">
-            <div class="item-menu">
+            <div class="item-menu"> <!-- Refri Lata 350ml -->
                 <img src="img/Refrigerantes-Lata.png" class="imagem-item" alt="">
                 <h3>Refrigerante (Lata 350ml)</h3>
                 <p>
@@ -279,7 +280,7 @@
                 <button class="adicionar-carrinho" data-nome="Refrigerante (Lata 350ml)" data-preco="6.00">Adicionar</button>
             </div>
             
-            <div class="item-menu">
+            <div class="item-menu"> <!-- Refri Garrafa 500ml -->
                 <img src="img/Refrigerantes-Garrafa500ml.jpg" class="imagem-item" alt="">
                 <h3>Refrigerante (Garrafa 500ml)</h3>
                 <p>
@@ -296,7 +297,7 @@
                 <button class="adicionar-carrinho" data-nome="Refrigerante (Garrafa 500ml)" data-preco="8.00">Adicionar</button>
             </div>
             
-            <div class="item-menu">
+            <div class="item-menu"> <!-- Refri Garrafa 1L -->
                 <img src="img/Refrigerantes-Garrafa1L.jpg" class="imagem-item" alt="" style="object-position: top;">
                 <h3>Refrigerante (Garrafa 1L)</h3>
                 <p>
@@ -312,7 +313,7 @@
                 <button class="adicionar-carrinho" data-nome="Refrigerante (Garrafa 1L)" data-preco="12.00">Adicionar</button>
             </div>
             
-            <div class="item-menu">
+            <div class="item-menu"> <!-- Agua sem gas -->
                 <img src="img/Garrafa-Agua.webp" class="imagem-item" alt="" style="width: auto;">
                 <h3>Água sem gás (500ml)</h3>
                 <p></p>
@@ -320,7 +321,7 @@
                 <button class="adicionar-carrinho" data-nome="Água sem gás (500ml)" data-preco="4.00">Adicionar</button>
             </div>
             
-            <div class="item-menu">
+            <div class="item-menu"> <!-- Agua com gas -->
                 <img src="img/Garrafa-Agua-comGas.webp" class="imagem-item agua-gas" alt="">
                 <h3>Água com gás (500ml)</h3>
                 <p></p>
@@ -328,9 +329,9 @@
                 <button class="adicionar-carrinho" data-nome="Água com gás (500ml)" data-preco="5.00">Adicionar</button>
             </div>
             
-            <div class="item-menu">
+            <div class="item-menu"> <!-- Sucos Naturais -->
                 <img src="img/Suco-Frutas.png" class="imagem-item" alt="">
-                <h3>Suco Natural (300ml)</h3>
+                <h3>Suco Natural (500ml)</h3>
                 <p>
                     <select class="selecionar-sabor">
                         <option value="Laranja">Laranja</option>
@@ -341,8 +342,8 @@
                         <option value="Melancia">Melancia</option>
                     </select>
                 </p>
-                <span class="preco">R$ 7,00</span>
-                <button class="adicionar-carrinho" data-nome="Suco Natural (300ml)" data-preco="7.00">Adicionar</button>
+                <span class="preco">R$ 12,00</span>
+                <button class="adicionar-carrinho" data-nome="Suco Natural (500ml)" data-preco="12.00">Adicionar</button>
             </div>
         </div>
         
@@ -352,12 +353,14 @@
                 <p id="contador-itens">0 itens adicionados</p>
                 <p id="valor-total">Total: R$ 0,00</p>
                 <button id="ver-itens" class="botao-ver-itens">
-                    <i class="fas fa-chevron-down"></i> Ver itens
+                    <i class="fas fa-chevron-up"></i> Ver itens
                 </button>
             </div>
             
             <div class="detalhes-pedido">
-                <div id="itens-carrinho" class="itens-carrinho-container"></div>
+                <div class="detalhes-wrapper" id="wrapper-conteudo">
+                    <div id="itens-carrinho" class="itens-carrinho-container"></div>
+                </div>
             </div>
             
             <div class="botoes-acoes">
@@ -374,36 +377,36 @@
     <script>
         let itensCarrinho = [];
         let valorTotal = 0;
-        
+
         function abrirMenu(nomeMenu) {
             var menus = document.getElementsByClassName("secao-menu");
             for (var i = 0; i < menus.length; i++) {
                 menus[i].style.display = "none";
             }
-            
+
             var botoes = document.getElementsByClassName("botao-aba");
             for (var i = 0; i < botoes.length; i++) {
                 botoes[i].classList.remove("ativo");
             }
-            
+
             document.getElementById(nomeMenu).style.display = "flex";
             event.currentTarget.classList.add("ativo");
         }
-        
+
         document.addEventListener('DOMContentLoaded', () => {
             // Adicionar itens ao carrinho
             document.querySelectorAll('.adicionar-carrinho').forEach(botao => {
-                botao.addEventListener('click', function() {
+                botao.addEventListener('click', function () {
                     const nomeBase = this.dataset.nome;
                     const elementoPai = this.parentElement;
                     const imagemItem = elementoPai.querySelector('.imagem-item').src;
-                    
+
                     const selecaoTamanho = elementoPai.querySelector('.selecionar-tamanho');
                     const selecaoSabor = elementoPai.querySelector('.selecionar-sabor');
-                    
+
                     let nomeItem = nomeBase;
                     let precoItem = 0;
-                    
+
                     if (selecaoTamanho) {
                         const opcaoSelecionada = selecaoTamanho.options[selecaoTamanho.selectedIndex];
                         nomeItem += ` - ${opcaoSelecionada.text.split('-')[0].trim()}`;
@@ -411,66 +414,120 @@
                     } else {
                         precoItem = parseFloat(this.dataset.preco || '0');
                     }
-                    
+
                     if (selecaoSabor) {
                         const saborSelecionado = selecaoSabor.options[selecaoSabor.selectedIndex].value;
                         nomeItem += ` - ${saborSelecionado}`;
                     }
-                    
+
                     itensCarrinho.push({
                         nome: nomeItem,
                         preco: precoItem,
                         imagem: imagemItem
                     });
-                    
+
                     valorTotal += precoItem;
                     atualizarResumoPedido();
                 });
             });
-            
-            // Ver itens
-            document.getElementById('ver-itens')?.addEventListener('click', function() {
-                const detalhes = document.querySelector('.detalhes-pedido');
+
+
+
+            // Ver itens com animação suave
+            const botaoVerItens = document.getElementById('ver-itens');
+            const detalhes = document.querySelector('.detalhes-pedido');
+            const wrapper = document.getElementById('wrapper-conteudo');
+            let aberto = false;
+            let emTransicao = false;
+
+            botaoVerItens?.addEventListener('click', function() {
+                if (emTransicao) return; // Evita múltiplos cliques durante a transição
+                emTransicao = true;
+                
                 const icone = this.querySelector('i');
-                
-                detalhes.classList.toggle('ativo');
-                
-                if (detalhes.classList.contains('ativo')) {
-                    icone.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                    this.innerHTML = '<i class="fas fa-chevron-up"></i> Ocultar itens';
-                } else {
+
+                if (!aberto) {
+                    // Abrindo
+                    detalhes.style.display = 'block';
+                    const alturaFinal = wrapper.scrollHeight;
+                    
+                    // Prepara para animação
+                    detalhes.style.height = '0';
+                    detalhes.style.overflow = 'hidden';
+                    
+                    // Força reflow
+                    void detalhes.offsetHeight;
+                    
+                    // Inicia animação
+                    detalhes.style.height = alturaFinal + 'px';
+
                     icone.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                    this.innerHTML = '<i class="fas fa-chevron-down"></i> Ver itens';
+                    this.innerHTML = '<i class="fas fa-chevron-down"></i> Ocultar itens';
+                    
+                    const handler = () => {
+                        // Mantém a altura final sem resetar para auto
+                        detalhes.style.overflow = 'visible';
+                        emTransicao = false;
+                        detalhes.removeEventListener('transitionend', handler);
+                    };
+                    detalhes.addEventListener('transitionend', handler);
+                    
+                    aberto = true;
+                } else {
+                    // Fechando
+                    const alturaAtual = detalhes.scrollHeight;
+                    detalhes.style.height = alturaAtual + 'px';
+                    detalhes.style.overflow = 'hidden';
+                    
+                    // Força reflow
+                    void detalhes.offsetHeight;
+                    
+                    // Inicia animação
+                    detalhes.style.height = '0';
+
+                    icone.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                    this.innerHTML = '<i class="fas fa-chevron-up"></i> Ver itens';
+                    
+                    const handler = () => {
+                        detalhes.style.display = 'none';
+                        detalhes.style.height = '';
+                        detalhes.style.overflow = '';
+                        emTransicao = false;
+                        detalhes.removeEventListener('transitionend', handler);
+                    };
+                    detalhes.addEventListener('transitionend', handler);
+                    
+                    aberto = false;
                 }
             });
-            
+
+
+
             // Limpar carrinho
             document.getElementById('limpar-carrinho')?.addEventListener('click', limparCarrinho);
-            
+
             // Concluir pedido
-            document.getElementById('concluir-pedido')?.addEventListener('click', function() {
+            document.getElementById('concluir-pedido')?.addEventListener('click', function () {
                 if (itensCarrinho.length === 0) {
                     alert('Seu carrinho está vazio!');
                     return;
                 }
-                
+
                 alert('Pedido concluído com sucesso! Obrigado por sua compra.');
                 limparCarrinho();
             });
         });
-        
+
         function atualizarResumoPedido() {
-            document.getElementById('contador-itens').textContent = 
+            document.getElementById('contador-itens').textContent =
                 `${itensCarrinho.length} ${itensCarrinho.length === 1 ? 'item' : 'itens'} adicionados`;
-                
-            document.getElementById('valor-total').textContent = 
+
+            document.getElementById('valor-total').textContent =
                 `Total: R$ ${valorTotal.toFixed(2).replace('.', ',')}`;
-            
-            // Atualizar lista de itens
+
             const containerItens = document.getElementById('itens-carrinho');
             containerItens.innerHTML = '';
-            
-            // Agrupar itens iguais
+
             const itensAgrupados = {};
             itensCarrinho.forEach(item => {
                 const chave = item.nome + item.preco + (item.imagem || '');
@@ -483,15 +540,14 @@
                     itensAgrupados[chave].quantidade++;
                 }
             });
-            
-            // Adicionar itens ao container
+
             Object.values(itensAgrupados).forEach(item => {
                 const divItem = document.createElement('div');
                 divItem.className = 'item-carrinho';
-                
+
                 const imagemSrc = item.imagem || 'img/logo-so-hamburger.png';
                 const nomeCurto = item.nome.split(' - ')[0];
-                
+
                 divItem.innerHTML = `
                     <img src="${imagemSrc}" alt="${nomeCurto}">
                     <p>${nomeCurto}</p>
@@ -502,16 +558,15 @@
                         <button class="adicionar-item" data-nome="${item.nome}" data-preco="${item.preco}">+</button>
                     </div>
                 `;
-                
+
                 containerItens.appendChild(divItem);
             });
-            
-            // Adicionar eventos aos botões de + e -
+
             document.querySelectorAll('.remover-item').forEach(botao => {
-                botao.addEventListener('click', function() {
+                botao.addEventListener('click', function () {
                     const nome = this.dataset.nome;
                     const preco = parseFloat(this.dataset.preco);
-                    
+
                     const index = itensCarrinho.findIndex(item => item.nome === nome && item.preco === preco);
                     if (index !== -1) {
                         itensCarrinho.splice(index, 1);
@@ -520,14 +575,14 @@
                     }
                 });
             });
-            
+
             document.querySelectorAll('.adicionar-item').forEach(botao => {
-                botao.addEventListener('click', function() {
+                botao.addEventListener('click', function () {
                     const nome = this.dataset.nome;
                     const preco = parseFloat(this.dataset.preco);
                     const itemOriginal = itensCarrinho.find(item => item.nome === nome && item.preco === preco);
                     const imagem = itemOriginal ? itemOriginal.imagem : '';
-                    
+
                     itensCarrinho.push({ nome, preco, imagem });
                     valorTotal += preco;
                     atualizarResumoPedido();

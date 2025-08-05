@@ -34,7 +34,9 @@ body {
 }
 
 .botao-aba {
-    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 208px;
+    height: 43px;
     margin: 0 5px;
     background-color: #A41113;
     color: #DAA520;
@@ -64,7 +66,7 @@ body {
     background-color: #C0171A;
     padding: 20px;
     padding-right: 0;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
@@ -203,7 +205,7 @@ body {
     color: white;
     border: none;
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     margin-top: 8px;
@@ -221,25 +223,14 @@ body {
 
 .detalhes-pedido {
     background-color: #454545;
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    padding: 0 15px;
-    box-sizing: border-box;
-    transition: all 0.5s ease;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.detalhes-pedido.ativo {
-    max-height: 300px;
+.detalhes-wrapper {
     padding: 15px;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
-
-.detalhes-pedido.ativo::-webkit-scrollbar {
-    display: none;
-}
-
 
 
 .itens-carrinho-container {
@@ -342,7 +333,7 @@ body {
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
@@ -363,7 +354,7 @@ body {
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
