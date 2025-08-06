@@ -107,32 +107,38 @@
     /* Seção sobre */
     #secao-sobre {
         height: auto;
-        padding: 40px 0;
+        flex-direction: column;
+        padding: 30px 0;
     }
 
     .texto-sobre {
-        width: 60%;
-        margin-left: 30px;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .texto-sobre p {
         width: 100%;
         height: auto;
-        font-size: 18px;
+        font-size: 16px;
+        padding: 0 10px;
     }
 
     .imagem-sobre {
-        width: 40%;
+        width: 100%;
+        margin-top: 20px;
     }
 
     #secao-sobre img {
-        height: 250px;
+        height: 200px;
     }
 
     .botao-saibaMais {
         position: static;
-        margin: 30px auto 0;
-        display: block;
+        margin: 20px auto 0;
+        width: 200px;
+        height: 45px;
+        font-size: 24px;
     }
 
     /* Seção infantil */
@@ -153,6 +159,45 @@
         max-width: 960px;
     }
 
+    /* Seção sobre */
+    #secao-sobre {
+        height: auto;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .texto-sobre {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .texto-sobre p {
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .imagem-sobre {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #secao-sobre img {
+        height: 200px;
+    }
+
+    .botao-saibaMais {
+        position: static;
+        margin: 20px auto 0;
+        width: 200px;
+        height: 45px;
+        font-size: 24px;
+    }
+
+
+
     /* Garantir que o botão saiba mais não fique muito longe em telas muito grandes */
     .botao-saibaMais {
         bottom: -366px;
@@ -172,7 +217,33 @@
     }
 
     /* Ajustar posição do botão saiba mais */
+    #secao-sobre {
+        height: auto;
+        display: flex;
+        float: left;
+        flex-direction: row;
+        padding: 30px 0;
+    }
+
+    #secao-sobre h2,
+    #secao-sobre p {
+        text-align: left;
+        padding: 0;
+    }
+    .texto-sobre {
+        margin-left: 25px;
+    }
+
     .botao-saibaMais {
-        right: 50px;
+        display: flex;
+        min-width: 200px;
+        margin: 0;
+
+        position: relative;
+        right: 15px;
+        bottom: -290px;
+    }
+    .imagem-sobre img {
+        height: 300px !important;
     }
 }
