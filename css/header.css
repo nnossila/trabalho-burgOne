@@ -107,6 +107,9 @@ header .facaSeuPedido a:hover {
     .facaSeuPedido {
         margin: 10px 0;
     }
+    .facaSeuPedido a {
+        text-align: left !important;
+    }
 }
 
 @media (min-width: 621px) and (max-width: 767px) {
