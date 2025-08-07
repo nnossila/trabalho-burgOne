@@ -92,7 +92,7 @@ input[type=submit]:hover {
 .mensagemConfirmacao {
     display: none;
     width: 500px;
-    height: 270px;
+    height: 300px;
     text-align: center;
     align-items: center;
     background-color: #383838;
